@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
-  "version": "0.1.0",
-  "description": "",
+  "name": "n8n-nodes-message-push",
+  "version": "1.0.0",
+  "description": "Message Push nodes for n8n",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
+    "name": "Colin Xu",
     "email": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/xuzhonglin/n8n-nodes-message-push.git"
   },
   "main": "index.js",
   "scripts": {
@@ -30,12 +30,13 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/WeworkGroupBotApi.credentials.js",
+      "dist/credentials/WeworkAppApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/WorkdayNode/WorkdayNode.node.js",
+      "dist/nodes/Wework/WeworkGroupBot.node.js",
+      "dist/nodes/Wework/WeworkApp.node.js"
     ]
   },
   "devDependencies": {
@@ -48,5 +49,9 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "sqlite3": "^5.1.7"
   }
 }
